@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Twitt-Twitt</string>
+    <string name="server_url">http://52.15.153.221/parse/</string>
+    <string name="masterKey">UWwzv2kZkBW9</string>
+</resources>
