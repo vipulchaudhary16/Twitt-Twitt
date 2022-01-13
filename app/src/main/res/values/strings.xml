@@ -9,4 +9,11 @@
     <string name="password">password</string>
     <string name="twitt_twitt">Twitt - Twitt</string>
     <string name="sign_up">Sign Up</string>
+    <string name="log_in">Log in</string>
+    <string name="already_have_account">Already have Account?</string>
+    <string name="already_text_2">Back to </string>
+    <string name="tweet">Tweet</string>
+    <string name="logout">Log Out</string>
+    <string name="your_feed">Your Feed</string>
+    <string name="follow">Follow</string>
 </resources>
