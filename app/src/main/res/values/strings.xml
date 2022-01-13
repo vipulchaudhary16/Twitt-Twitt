@@ -2,4 +2,11 @@
     <string name="app_name">Twitt-Twitt</string>
     <string name="server_url">http://52.15.153.221/parse/</string>
     <string name="masterKey">UWwzv2kZkBW9</string>
+    <string name="title_activity_fullscreen_splash">FullscreenSplash</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="username">Username</string>
+    <string name="password">password</string>
+    <string name="twitt_twitt">Twitt - Twitt</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
