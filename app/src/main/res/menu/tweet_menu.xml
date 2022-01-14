@@ -4,8 +4,8 @@
         android:id="@+id/tweet"
         android:title="@string/tweet" />
     <item
-        android:id="@+id/view_feed"
-        android:title="@string/your_feed" />
+        android:id="@+id/users_list"
+        android:title="@string/users_list" />
     <item
         android:id="@+id/log_out"
         android:title="@string/logout" />

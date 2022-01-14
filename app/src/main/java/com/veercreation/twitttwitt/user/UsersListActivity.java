@@ -38,70 +38,7 @@ public class UsersListActivity extends AppCompatActivity {
     ArrayAdapter adapter;
     ListView userListListView;
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater menuInflater = new MenuInflater(this);
-        menuInflater.inflate(R.menu.tweet_menu , menu);
-        return super.onCreateOptionsMenu(menu);
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.tweet:{
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-
-                builder.setTitle("Send a Twitt");
-
-                EditText tweetEditText = new EditText(this);
-
-                builder.setView(tweetEditText);
-
-                builder.setPositiveButton("Tweet", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Log.i("tweet" , tweetEditText.getText().toString());
-                        ParseObject tweet = new ParseObject("Tweet");
-                        tweet.put("tweet" ,tweetEditText.getText().toString());
-                        tweet.put("username" , ParseUser.getCurrentUser().getUsername());
-                        tweet.saveInBackground(e -> {
-                            if(e==null){
-                                Toast.makeText(UsersListActivity.this, "Twitted", Toast.LENGTH_SHORT).show();
-                            } else {
-                                Toast.makeText(UsersListActivity.this, "twitt failed", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-
-                    }
-                });
-
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Log.i("tweet" , "Canceled");
-                        dialogInterface.cancel();
-                    }
-                });
-
-                builder.show();
-                return true;
-            }
-
-            case R.id.view_feed:{
-                Intent intent = new Intent(getApplicationContext() , FeedActivity.class);
-                startActivity(intent);
-                return true;
-            }
-            case R.id.log_out:{
-                ParseUser.logOut();
-                Intent intent = new Intent(getApplicationContext() ,LogInSignInActivity.class);
-                startActivity(intent);
-                finish();
-                return true;
-            }
-        }
-             return super.onOptionsItemSelected(item);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

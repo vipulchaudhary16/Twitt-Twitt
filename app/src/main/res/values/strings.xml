@@ -14,6 +14,7 @@
     <string name="already_text_2">Back to </string>
     <string name="tweet">Tweet</string>
     <string name="logout">Log Out</string>
-    <string name="your_feed">Your Feed</string>
+    <string name="users_list">users on Twitt-twitt</string>
+    <string name="your_feed">Your feed</string>
     <string name="follow">Follow</string>
 </resources>

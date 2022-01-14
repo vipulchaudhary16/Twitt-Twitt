@@ -28,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
         Timer timer = new Timer("Timer");;
         timer.schedule(task , 1400L);
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
-
-        ;
         currentUser = ParseUser.getCurrentUser();
     }
 
@@ -41,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(moveToNext);
             } else {
                 Intent moveToNext;
-                moveToNext = new Intent(getApplicationContext(), UsersListActivity.class);
+                moveToNext = new Intent(getApplicationContext(), FeedActivity.class);
                 startActivity(moveToNext);
             }
             finish();
